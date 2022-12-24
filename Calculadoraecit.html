@@ -1,0 +1,116 @@
+<html>
+	<head>
+<style>
+
+body{
+background-color:#ADD8E6;    
+margin-top:150px;
+}
+h1{
+color:white;
+font-family:open sans;
+font-size:20px;
+}
+ 
+.i1{
+
+width:200px; 
+heigth:200px;
+position:absolute;
+top:200px;
+left:200px;
+
+}
+
+.i2{
+
+width:250px; 
+heigth:250px;
+position:absolute;
+top:220px;
+left:380px;
+
+}
+
+
+</style>		
+           <title>calculadora com eval</title>
+               <meta name="viewport" content="initial-scale=1, width=device-width">
+		<script>
+			function insert(num){
+			document.formulario.mostrador.value=document.formulario.mostrador.value+num;
+			}
+			
+			function total(){
+			var x = document.formulario.mostrador.value;
+			document.formulario.mostrador.value=eval(x);	
+			}
+			
+			function limpar(){
+			document.formulario.mostrador.value="";
+			}
+			
+			function back(){
+				var recebe = document.formulario.mostrador.value;
+				document.formulario.mostrador.value=recebe.substring(0,recebe.length-1);
+			}			
+
+		</script>
+	
+	</head>
+<center>
+   <body>
+       <div id=text>
+     <h1> 
+        ECIT Professor Luis de Azevedo Soares  
+    </h1>
+        </div>
+         
+		<form name='formulario'>
+			<input type="text" name='mostrador' >
+		</form>
+		
+		<table>
+			<tr>
+				<td><input type="button" value="+" onClick='insert("+");'>	</td>
+				<td><input type="button" value="-" onClick='insert("-");'>	</td>
+				<td><input type="button" value="x" onClick='insert("*");'>	</td>
+				<td><input type="button" value=":" onClick='insert("/");'>	</td>
+			</tr>
+			<tr>
+				<td><input type="button" value="1" onClick='insert(1);'></td>
+				<td><input type="button" value="2" onClick='insert(2);'></td>
+				<td><input type="button" value="3" onClick='insert(3);'></td>
+			</tr>	
+			
+			<tr>
+				<td><input type="button" value="4" onClick='insert(4);'></td>
+				<td><input type="button" value="5" onClick='insert(5);'></td>
+				<td><input type="button" value="6" onClick='insert(6);'></td>
+			</tr>	
+
+			<tr>
+				<td><input type="button" value="7" onClick='insert(7);'></td>
+				<td><input type="button" value="8" onClick='insert(8);'></td>
+				<td><input type="button" value="9" onClick='insert(9);'></td>
+			</tr>	
+			
+			<tr>
+				<td><input type="button" value="0" onClick='insert(0);'></td>
+				<td><input type="button" value="C" onClick='limpar();'></td>
+				<td><input type="button" value="=" onClick='total();'></td>
+				<td><input type="button" value="<" onClick='back();'></td>
+			</tr>			
+</center>
+          </table>
+<div class="i1">	
+             <img src="unnamed.jpg" class="i1" >
+</div>
+<div class="i2">
+             <img src ="IMG-20210728-WA0022.jpg"  class="i2" alt="calculadora"  >             
+</div>
+          </body>
+               
+
+
+</html>
